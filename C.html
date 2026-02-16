@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Daksh Kumar</title>
+
+<!-- ICON LIBRARY -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:#e2e8f0;
+}
+
+/* ===== HEADER ===== */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#020617;
+border-bottom:1px solid #1e293b;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:40px;
+border-radius:50%;
+}
+
+nav a{
+color:#cbd5e1;
+text-decoration:none;
+margin-left:22px;
+font-size:15px;
+transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+color:#38bdf8;
+}
+
+.menu{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* ===== PAGE ===== */
+.page{
+padding:70px 8%;
+}
+
+/* LAYOUT */
+.contact-container{
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:70px;
+align-items:start;
+}
+
+/* INFO SIDE */
+.contact-info h1{
+font-size:42px;
+margin-bottom:15px;
+color:#38bdf8;
+}
+
+.contact-info p{
+color:#94a3b8;
+margin-bottom:30px;
+line-height:1.7;
+}
+
+.info-box{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:20px;
+}
+
+.info-box i{
+width:48px;
+height:48px;
+background:#1e293b;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+color:#38bdf8;
+font-size:18px;
+}
+
+/* FORM */
+.contact-form{
+background:#1e293b;
+padding:40px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+padding:14px 16px;
+margin-bottom:16px;
+border:none;
+border-radius:12px;
+background:#334155;
+color:#fff;
+outline:none;
+transition:.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+background:#475569;
+box-shadow:0 0 0 2px #38bdf8;
+}
+
+.contact-form textarea{
+min-height:130px;
+resize:none;
+}
+
+.contact-form button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:40px;
+background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.contact-form button:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 25px rgba(56,189,248,.4);
+}
+
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:62px;
+height:62px;
+background:#25d366;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+border-radius:50%;
+box-shadow:0 10px 25px rgba(0,0,0,.6);
+text-decoration:none;
+transition:.3s;
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
+}
+
+/* MOBILE */
+@media(max-width:900px){
+
+.menu{display:block}
+nav{
+position:absolute;
+top:70px;
+right:-100%;
+background:#020617;
+width:220px;
+display:flex;
+flex-direction:column;
+padding:20px;
+transition:.4s;
+}
+
+nav.show{right:0}
+
+nav a{margin:10px 0}
+
+.contact-container{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.page{padding:50px 6%}
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="daksh logo.jpeg">
+        <h2>Daksh Kumar</h2>
+    </div>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="A.html">About</a>
+        <a href="CV.html">CV</a>
+        <a href="B.html">Blog</a>
+        <a href="C.html" class="active">Contact</a>
+    </nav>
+
+    <div class="menu" id="menu"><i class="fas fa-bars"></i></div>
+</header>
+
+<main class="page">
+
+<div class="contact-container">
+
+<!-- INFO -->
+<div class="contact-info">
+<h1>Contact Me</h1>
+
+<p>
+Need a website, editing or branding service?  
+Send me a message — I usually reply within 24 hours.
+I focus on clear communication and professional delivery.
+</p>
+
+<div class="info-box">
+<i class="fas fa-envelope"></i>
+<span>dakshkumar4617@gmail.com</span>
+</div>
+
+<div class="info-box">
+<i class="fas fa-location-dot"></i>
+<span>India</span>
+</div>
+
+</div>
+
+<!-- FORM -->
+<form class="contact-form"
+action="https://formsubmit.co/dakshkumar4617@gmail.com"
+method="POST">
+
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="thankyou.html">
+
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+</div>
+
+</main>
+
+<a class="whatsapp" href="https://wa.me/919528095030" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const menu=document.getElementById("menu");
+const nav=document.getElementById("nav");
+
+menu.onclick=()=>nav.classList.toggle("show");
+</script>
+
+</body>
+</html>

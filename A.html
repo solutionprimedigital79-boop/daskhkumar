@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Daksh Kumar</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* ===== HEADER ===== */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    background:#111827;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+    color:#38bdf8;
+}
+
+/* ===== PAGE ===== */
+.page{
+    padding:60px 8%;
+}
+
+/* ===== HERO ===== */
+.about-hero{
+    display:grid;
+    grid-template-columns:420px 1fr;
+    gap:60px;
+    align-items:center;
+    margin-bottom:70px;
+}
+
+.about-img img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+.about-text h1{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+.about-text p{
+    margin-bottom:18px;
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+/* ===== CARDS ===== */
+.about-cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.about-card{
+    background:#1e293b;
+    padding:30px 25px;
+    border-radius:18px;
+    transition:.35s;
+}
+
+.about-card h3{
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.about-card p{
+    color:#cbd5e1;
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+
+/* ===== SKILLS ===== */
+.skills{
+    margin-top:70px;
+}
+
+.skill{
+    margin-bottom:20px;
+}
+
+.skill span{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:6px;
+}
+
+.bar{
+    height:8px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    background:#38bdf8;
+    width:0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+
+    .about-hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .about-cards{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="daksh logo.jpeg" alt="Daksh Logo">
+        <h2>Daksh Kumar</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="A.html" class="active">About</a>
+        <a href="CV.html">CV</a>
+        <a href="B.html">Blog</a>
+        <a href="C.html">Contact</a>
+    </nav>
+</header>
+
+<main class="page">
+
+<div class="about-hero">
+
+    <div class="about-img">
+        <img src="maniger.jpeg" alt="Daksh">
+    </div>
+
+    <div class="about-text">
+        <h1>About Me</h1>
+
+        <p>
+        I am Daksh Kumar, a passionate web developer focused on creating modern,
+        responsive and visually clean websites.
+        </p>
+
+        <p>
+        My journey started with curiosity about how websites work. Over time I
+        learned HTML, CSS and responsive design techniques.
+        </p>
+
+        <p>
+        Along with development I also work in video editing and graphic design,
+        delivering complete digital solutions.
+        </p>
+    </div>
+
+</div>
+
+<div class="about-cards">
+
+    <div class="about-card">
+        <h3>My Mission</h3>
+        <p>Create clean, fast and modern websites that help businesses grow online.</p>
+    </div>
+
+    <div class="about-card">
+        <h3>My Vision</h3>
+        <p>To become a professional full-stack developer and build digital systems.</p>
+    </div>
+
+    <div class="about-card">
+        <h3>My Strength</h3>
+        <p>Creative thinking combined with strong development skills.</p>
+    </div>
+
+</div>
+
+<div class="skills">
+
+    <div class="skill">
+        <span>HTML / CSS <b>90%</b></span>
+        <div class="bar"><div class="fill" data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Responsive Design <b>85%</b></span>
+        <div class="bar"><div class="fill" data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+        <span>Video Editing <b>80%</b></span>
+        <div class="bar"><div class="fill" data-width="80%"></div></div>
+    </div>
+
+</div>
+
+</main>
+
+<script>
+
+/* Skill Bar Animation */
+window.addEventListener("load", ()=>{
+    const fills = document.querySelectorAll(".fill");
+    fills.forEach(fill=>{
+        fill.style.transition = "1.5s";
+        fill.style.width = fill.dataset.width;
+    });
+});
+
+</script>
+
+</body>
+</html>
